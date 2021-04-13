@@ -1,0 +1,28 @@
+<!--
+ * @author: linzl
+ * @method: 
+ * @param: 
+ * @Date: 2021-04-13 10:45:22
+ * @return: 
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>miniReactive</title>
+</head>
+<body>
+    <div id="app"></div>    
+</body>
+<script src="./index.js"></script>
+<script>
+    let obj  = reactive({a: 1})
+    effect(()=>{
+        document.getElementById("app").innerText = obj.a
+    })
+    setInterval(()=>{
+        obj.a ++
+    }, 1000)
+</script>
+</html>
